@@ -6,7 +6,12 @@ wikipedia.org/wiki/Htop
 
 ## How to use this AppJail
 
-**TODO**
+```console
+$ bin install https://github.com/appjail-makejails/htop
+$ test -x ~/bin/htop.appjail; echo $?
+0
+$ htop.appjail
+```
 
 
 ### User Attributes
