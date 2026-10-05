@@ -11,15 +11,16 @@ jobs:
       contents: write
     runs-on: ubuntu-latest
     name: Build and release an AppJail
+    env:
+      SIGN_KEY: ${{ secrets.X11APPJAIL_SIGN_KEY }}
+      REPO_NAME: ${{ github.event.repository.name }}
     steps:
       - uses: actions/checkout@v6
       - name: Build
         id: assets
         uses: vmactions/freebsd-vm@v1
         with:
-          env:
-            SIGN_KEY: ${{ secrets.X11APPJAIL_SIGN_KEY }}
-            REPO_NAME: ${{ github.event.repository.name }}
+          envs: 'SIGN_KEY REPO_NAME'
           # Minimal production release for maximum compatibility.
           release: '15.1'
           usesh: true
