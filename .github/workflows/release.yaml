@@ -16,10 +16,10 @@ jobs:
       - name: Build
         id: assets
         uses: vmactions/freebsd-vm@v1
-        env:
-          SIGN_KEY: ${{ secrets.X11APPJAIL_SIGN_KEY }}
-          REPO_NAME: ${{ github.event.repository.name }}
         with:
+          env:
+            SIGN_KEY: ${{ secrets.X11APPJAIL_SIGN_KEY }}
+            REPO_NAME: ${{ github.event.repository.name }}
           # Minimal production release for maximum compatibility.
           release: '15.1'
           usesh: true
