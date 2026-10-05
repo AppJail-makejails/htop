@@ -4,6 +4,8 @@ htop is an interactive system monitor process viewer and process manager. It is 
 
 wikipedia.org/wiki/Htop
 
+<img src="https://raw.githubusercontent.com/AppJail-makejails/htop/refs/heads/main/htop/htop.png" width="30%" height="auto" alt="htop logo">
+
 ## How to use this AppJail
 
 ```console
